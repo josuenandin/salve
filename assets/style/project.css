@@ -1,0 +1,158 @@
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Banner styles */
+.banner {
+  background-image: url(https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_960_720.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  color: #fff;
+  font-size: 48px;
+}
+
+/* Product styles */
+.products {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.product {
+  flex-basis: 23%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.product-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product:hover .product-image img {
+  transform: scale(1.1);
+}
+
+.product h1 {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.product p {
+  margin-bottom: 20px;
+}
+
+.product-price {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product:hover .product-overlay {
+  opacity: 1;
+}
+
+.product-overlay a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product-overlay a:hover {
+  background-color: #fff;
+  color: #333;
+}
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  text-align: center;
+}
